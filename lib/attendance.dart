@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'navbar.dart';
+import 'navbar.dart'; // Import the CustomNavBar
 
 class Attendance extends StatelessWidget {
   @override
@@ -15,7 +15,7 @@ class Attendance extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-        itemCount: 1,
+        itemCount: 1, // Adjust the itemCount as needed
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -66,7 +66,7 @@ class Attendance extends StatelessWidget {
           );
         },
       ),
-      bottomNavigationBar: CustomNavBar(), // Custom Navigation Bar
+      bottomNavigationBar: CustomNavBar(currentIndex: 1), // Include the CustomNavBar
     );
   }
 }

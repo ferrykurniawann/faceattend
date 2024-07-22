@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import "package:flutter_feather_icons/flutter_feather_icons.dart";
-import 'navbar.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'navbar.dart'; // Import the CustomNavBar
 
 void main() {
   runApp(MyApp());
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,  // Remove debug banner
+      debugShowCheckedModeBanner: false, // Remove debug banner
       home: HomePage(),
     );
   }
@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         ElevatedButton(
-                          onPressed: null,
+                          onPressed: null, // Disabled button
                           child: Text('Clock out'),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.grey[300],
@@ -98,7 +98,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          CustomNavBar(), // Custom Navigation Bar
+          CustomNavBar(currentIndex: 0), // Include CustomNavBar and set the index to 0
         ],
       ),
     );
